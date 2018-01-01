@@ -1,0 +1,25 @@
+{
+  "name": "2d-bicubic-interpolate",
+  "version": "1.0.0",
+  "description": "Interpolate data set representing function of two variables z = f(x,y) with bicubic spline",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jablpiotrek/2d-bicubic-interpolate.git"
+  },
+  "keywords": [
+    "bicubic",
+    "interpolation",
+    "array",
+    "2d"
+  ],
+  "author": "Piotr Jablonski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jablpiotrek/2d-bicubic-interpolate/issues"
+  },
+  "homepage": "https://github.com/jablpiotrek/2d-bicubic-interpolate#readme"
+}
