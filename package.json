@@ -1,6 +1,6 @@
 {
   "name": "2d-bicubic-interpolate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Interpolate data set representing function of two variables z = f(x,y) with bicubic spline",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "url": "https://github.com/jablpiotrek/2d-bicubic-interpolate/issues"
   },
   "homepage": "https://github.com/jablpiotrek/2d-bicubic-interpolate#readme",
-  "dependancies" : {
+  "dependancies": {
     "cubic-spline": "^1.0.4",
     "split-array": "^1.0.1"
   }
