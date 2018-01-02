@@ -22,7 +22,7 @@
     "url": "https://github.com/jablpiotrek/2d-bicubic-interpolate/issues"
   },
   "homepage": "https://github.com/jablpiotrek/2d-bicubic-interpolate#readme",
-  "dependancies": {
+  "dependencies": {
     "cubic-spline": "^1.0.4",
     "split-array": "^1.0.1"
   }
