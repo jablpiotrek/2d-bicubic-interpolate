@@ -1,5 +1,3 @@
-'use strict';
-
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -85,14 +83,14 @@ function interpolateArray(data, n) {
         }
         return record.z;
     });
-    Z = (0, _splitArray2.default)(Z, X.length);
+    Z = (0, _splitArray2.default)(Z, Y.length);
 
     //interpolate along columns
     var interpColumns = [];
     for (var i = 0; i < Y.length; i++) {
         var tempZ = [];
         for (var j = 0; j < X.length; j++) {
-            tempZ.push(Z[i][j]);
+            tempZ.push(Z[j][i]);
         }
         interpColumns.push(interpoalateDirection(X, tempZ, n));
     }
@@ -113,13 +111,16 @@ function interpolateArray(data, n) {
     X2 = interpolateAxis(X, n);
     Y2 = interpolateAxis(Y, n);
 
+
+
     //assemble data object
-    for (var x = 0; x < X2.length; x++) {
-        for (var y = 0; y < Y2.length; y++) {
+
+    for (var y = 0; y < Y2.length; y++) {
+        for (var x = 0; x < X2.length; x++) {
             dataInt.push({
                 x: X2[x],
                 y: Y2[y],
-                z: Z3[y][x]
+                z: Z3[x][y]
             });
         }
     }
