@@ -1,6 +1,6 @@
 {
   "name": "2d-bicubic-interpolate",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Interpolate data set representing function of two variables z = f(x,y) with bicubic spline",
   "main": "index.js",
   "scripts": {
