@@ -2,21 +2,15 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = interpolateArray;
-
 var _cubicSpline = require('cubic-spline');
-
 var _cubicSpline2 = _interopRequireDefault(_cubicSpline);
-
 var _splitArray = require('split-array');
-
 var _splitArray2 = _interopRequireDefault(_splitArray);
-
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
     };
 }
-
 function interpolateArray(data, n) {
     //interploation of simple row or column
     function interpoalateDirection(axis, Z, n) {
@@ -48,14 +42,11 @@ function interpolateArray(data, n) {
     ];
     n is a number of points, that will be inserted between data points
     */
-
     //sort data firstly by x and then by y
-
     data.sort(function (a, b) {
         //sort firstly by 1st column, if equal then sort by second column
         return a.x - b.x || a.y - b.y;
     });
-
     //dissasemble object
     var X = [];
     var Y = [];
@@ -84,7 +75,6 @@ function interpolateArray(data, n) {
         return record.z;
     });
     Z = (0, _splitArray2.default)(Z, Y.length);
-
     //interpolate along columns
     var interpColumns = [];
     for (var i = 0; i < Y.length; i++) {
@@ -94,7 +84,6 @@ function interpolateArray(data, n) {
         }
         interpColumns.push(interpoalateDirection(X, tempZ, n));
     }
-
     //interpolate along rows
     for (var _i = 0; _i < interpColumns[0].length; _i++) {
         var row = [];
@@ -106,15 +95,10 @@ function interpolateArray(data, n) {
     Z3 = Z2.map(function (row) {
         return interpoalateDirection(Y, row, n);
     });
-
     //interpolate arguments x and y
     X2 = interpolateAxis(X, n);
     Y2 = interpolateAxis(Y, n);
-
-
-
     //assemble data object
-
     for (var y = 0; y < Y2.length; y++) {
         for (var x = 0; x < X2.length; x++) {
             dataInt.push({
@@ -124,6 +108,12 @@ function interpolateArray(data, n) {
             });
         }
     }
-
-    return dataInt;
+    if (n===0) {
+        return data;
+    } else {
+        return dataInt;
+    }
+};
+module.exports = {
+    interpolateArray
 };
