@@ -19,10 +19,7 @@ To install package:
 ```
 npm install --save 2d-bicubic-interpolate
 ```
-Don't forget about dependencies:
-```
-npm install --save cubic-spline split-array
-```
+
 ## Include in your project
 
 ```javascript
