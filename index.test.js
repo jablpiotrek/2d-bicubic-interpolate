@@ -1,5 +1,5 @@
 const should = require('chai').should();
-const interpolateArray = require('./index').interpolateArray;
+const interpolateArray = require('./index').default;
 const data = [
     {
         x: 1,

@@ -114,6 +114,3 @@ function interpolateArray(data, n) {
         return dataInt;
     }
 };
-module.exports = {
-    interpolateArray
-};
