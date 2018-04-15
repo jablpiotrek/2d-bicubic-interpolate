@@ -69,7 +69,7 @@ function interpolateArray(data, n) {
         return record;
     });
     data.map(function (record) {
-        if (Z.indexOf(record.z) === -1) {
+        if (true) {
             Z.push(record.z);
         }
         return record.z;
