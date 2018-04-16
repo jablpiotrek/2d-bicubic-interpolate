@@ -1,5 +1,15 @@
 # 2d-bicubic-interpolate
 
+## Ver. 1.0.7
+
+This version includes contribution of [Akshat Khare](https://github.com/akshat-khare). According to Akshat pull request: 
+
+```
+Previously the code failed for matrices with repeated value of z for
+different record, which is undesired, so changed the code to accomodate
+that issue.
+```
+
 ## Description
 
 This package is a simple implementation of a [cubic-spline](https://www.npmjs.com/package/cubic-spline) by [morganherlocker](https://www.npmjs.com/~morganherlocker) for two-directional interpolation (2-dimensional arrays).  
@@ -11,7 +21,7 @@ z = f(x,y)
 Following package was developed for [another project](https://github.com/jablpiotrek/Contact-stress) that utilizes it for surface plot interpolation.
 ## Dependencies
 
-Package runs thanks to two dependencies. Firstly, of course  [cubic-spline](https://www.npmjs.com/package/cubic-spline) by [morganherlocker](https://www.npmjs.com/~morganherlocker) must be included. Another little package needed to run 2d-bicubic-spline is [split-array](https://www.npmjs.com/package/split-array) by [Arthur Verschaeve](https://www.npmjs.com/~arthurvr)
+Package runs thanks to two dependencies. Firstly, of course  [cubic-spline](https://www.npmjs.com/package/cubic-spline) by [morganherlocker](https://www.npmjs.com/~morganherlocker) must be included. Another little package needed to run 2d-bicubic-spline is [split-array](https://www.npmjs.com/package/split-array) by [Arthur Verschaeve](https://www.npmjs.com/~arthurvr). Development dependencies fot testing include Mocha & Chai.
 
 ## Install
 
